@@ -2,7 +2,7 @@
   "name": "expensify",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Andrew Mead",
+  "author": "Zi wei",
   "license": "MIT",
   "scripts": {
     "serve": "live-server public/",
@@ -24,6 +24,7 @@
     "react": "15.6.1",
     "react-dom": "15.6.1",
     "react-modal": "2.2.2",
+    "react-redux": "^5.0.7",
     "react-router-dom": "4.1.2",
     "redux": "3.7.2",
     "sass-loader": "6.0.6",
