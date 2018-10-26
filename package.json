@@ -6,9 +6,10 @@
   "license": "MIT",
   "scripts": {
     "serve": "live-server public/",
-    "build": "webpack",
+    "build:dev": "webpack",
+    "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
-    "test": "jest --config=jest.config.json --watch"
+    "test": "jest -u --config=jest.config.json"
   },
   "dependencies": {
     "babel-cli": "6.24.1",
@@ -19,21 +20,21 @@
     "babel-preset-env": "1.5.2",
     "babel-preset-react": "6.24.1",
     "css-loader": "0.28.4",
-    "enzyme": "^3.7.0",
-    "enzyme-adapter-react-16": "^1.6.0",
-    "enzyme-to-json": "^3.3.4",
+    "enzyme": "2.9.1",
+    "enzyme-to-json": "1.5.1",
+    "jest": "20.0.4",
     "live-server": "^1.2.0",
-    "moment": "^2.22.2",
+    "moment": "2.18.1",
     "node-sass": "4.5.3",
     "normalize.css": "7.0.0",
-    "react": "^16.6.0",
+    "react": "15.6.1",
     "react-addons-shallow-compare": "15.6.0",
     "react-dates": "12.3.0",
-    "react-dom": "^16.6.0",
+    "react-dom": "15.6.1",
     "react-modal": "2.2.2",
-    "react-redux": "^5.0.7",
+    "react-redux": "5.0.5",
     "react-router-dom": "4.1.2",
-    "react-test-renderer": "^16.6.0",
+    "react-test-renderer": "15.6.1",
     "redux": "3.7.2",
     "sass-loader": "6.0.6",
     "style-loader": "0.18.2",
@@ -43,6 +44,6 @@
     "webpack-dev-server": "2.5.1"
   },
   "devDependencies": {
-    "jest": "^23.6.0"
+    "html-webpack-plugin": "^3.2.0"
   }
 }
