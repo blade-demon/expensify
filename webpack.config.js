@@ -1,19 +1,15 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = env => {
   const isProduction = env === "production";
   const CSSExtract = new ExtractTextPlugin("styles.css");
-  const HtmlWebpack = new HtmlWebpackPlugin({
-    template: "src/index.html"
-  });
 
   return {
     entry: "./src/app.js",
     output: {
-      path: path.join(__dirname, "public"),
-      filename: "[name].[hash].js"
+      path: path.join(__dirname, "public", "dist"),
+      filename: "bundle.js"
     },
     module: {
       rules: [
@@ -43,8 +39,9 @@ module.exports = env => {
     devServer: {
       contentBase: path.join(__dirname, "public"),
       // proxy requests  back to index.html
-      historyApiFallback: true
+      historyApiFallback: true,
+      publicPath: "/dist/"
     },
-    plugins: [HtmlWebpack, CSSExtract]
+    plugins: [CSSExtract]
   };
 };
