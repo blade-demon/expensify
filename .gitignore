@@ -3,3 +3,7 @@ node_modules
 .vscode
 yarn.lock
 __snapshots__
+public/*.js
+public/*.js.map
+public/styles.css
+public/styles.css.map
