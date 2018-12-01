@@ -2,12 +2,12 @@ import * as firebase from "firebase";
 import * as expensesActions from "../actions/expenses";
 
 const config = {
-  apiKey: "AIzaSyBazfDeFQtTyLVYWijHSzyy46qWnd89-6k",
-  authDomain: "expensify-83061.firebaseapp.com",
-  databaseURL: "https://expensify-83061.firebaseio.com",
-  projectId: "expensify-83061",
-  storageBucket: "expensify-83061.appspot.com",
-  messagingSenderId: "637141571334"
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.FIREBASE_DATABASE_URL,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID
 };
 
 firebase.initializeApp(config);

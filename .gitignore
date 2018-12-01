@@ -4,3 +4,5 @@ node_modules
 yarn.lock
 __snapshots__
 public/dist
+.env.test
+.env.development
