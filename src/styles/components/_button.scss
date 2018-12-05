@@ -5,4 +5,15 @@
   font-weight: 300;
   font-size: $font-size-large;
   padding: $s-size;
+  display: inline-block;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.button--link {
+  background: none;
+}
+
+.button--secondary {
+  background: #888;
 }
